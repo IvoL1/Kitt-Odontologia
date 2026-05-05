@@ -1,1 +1,6 @@
 @import url('./components/header.css');
+
+body {
+  background: linear-gradient(0deg, #faf8ff 0%, #faf8ff 100%), #fff;
+  min-height: 140vh;
+}
