@@ -136,6 +136,24 @@
   }
 }
 
+.team__item-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  & a img {
+    color: #5a5a5a;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   .team__list {
