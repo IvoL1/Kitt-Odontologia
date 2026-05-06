@@ -1,4 +1,8 @@
 .services {
+  background: #ecedf9;
+}
+
+.services__container {
   max-width: 96rem;
   margin: 0 auto;
   padding: 4.19rem 1.5rem;
@@ -59,6 +63,7 @@
   gap: 0.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
+  background-color: #fff;
 
   &:hover {
     transform: scale(1.05);
