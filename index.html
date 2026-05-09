@@ -11,10 +11,11 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"> -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"></noscript>
     <link rel="stylesheet" href="src/css/reset.css" />
     <link rel="stylesheet" href="src/css/main.css" />
-    <script src="https://unpkg.com/lucide@1.14.0/dist/umd/lucide.js"></script>
     <script type="module" src="src/js/main.js" defer></script>
     <title>OralVita - A NOSSA FAMÍLIA CUIDANDO DA SUA!</title>
   </head>
@@ -29,7 +30,7 @@
             src="/src/assets/icons/oralvita-logo.svg"
             alt="Logo OralVita"
           />
-          <h1>OralVita</h1>
+          <p>OralVita</p>
         </div>
 
         <nav class="header__nav">
@@ -70,7 +71,7 @@
       <div class="hero__content">
         <p class="hero__eyebrow">ODONTOLOGIA DE ALTO PADRÃO</p>
 
-        <h2 class="hero__title">Sorrisos de <span>Alta Performance</span></h2>
+        <h1 class="hero__title">Sorrisos de <span>Alta Performance</span></h1>
 
         <p class="hero__description">Combinamos 38 anos de expertise clínica com as mais avançadas tecnologias globais para transformar sua saúde bucal em uma obra de arte funcional.</p>
 
@@ -84,7 +85,7 @@
       </div>
 
       <div class="hero__media">
-        <img class="hero__image" src="src/assets/images/hero-image.avif" alt="Paciente sorrindo após tratamento odontológico">
+        <img class="hero__image" fetchpriority="high" width="800" height="600" src="src/assets/images/hero-image.avif" alt="Paciente sorrindo após tratamento odontológico">
       </div>
 
     </section>
@@ -216,7 +217,7 @@ precisão milimétrica e estética superior.</p>
           <li class="team__item">
 
             <div class="team__item-image">
-              <img src="src/assets/images/doctor-woman.avif" alt="Foto da Dra. Helena Martins, especialista em odontologia estética" />
+              <img loading="lazy" src="src/assets/images/doctor-woman.avif" alt="Foto da Dra. Helena Martins, especialista em odontologia estética" />
             </div>
 
             <div class="team__item-info">
@@ -246,7 +247,7 @@ precisão milimétrica e estética superior.</p>
           <li class="team__item">
 
             <div class="team__item-image">
-              <img src="src/assets/images/doctor-woman.avif" alt="Foto da Dra. Ana Luiza, especialista em odontologia estética" />
+              <img loading="lazy" src="src/assets/images/doctor-woman.avif" alt="Foto da Dra. Ana Luiza, especialista em odontologia estética" />
             </div>
 
             <div class="team__item-info">
@@ -276,7 +277,7 @@ precisão milimétrica e estética superior.</p>
            <li class="team__item">
 
             <div class="team__item-image">
-              <img src="src/assets/images/doctor-man.avif" alt="Foto do Dr. Carlos Eduardo, especialista em odontologia estética" />
+              <img loading="lazy" src="src/assets/images/doctor-man.avif" alt="Foto do Dr. Carlos Eduardo, especialista em odontologia estética" />
             </div>
 
             <div class="team__item-info">
@@ -306,7 +307,7 @@ precisão milimétrica e estética superior.</p>
           <li class="team__item">
 
             <div class="team__item-image">
-              <img src="src/assets/images/doctor-man.avif" alt="Foto do Dr. Roberto Bittencourt, especialista em odontologia estética" />
+              <img loading="lazy" src="src/assets/images/doctor-man.avif" alt="Foto do Dr. Roberto Bittencourt, especialista em odontologia estética" />
             </div>
 
             <div class="team__item-info">
@@ -374,7 +375,7 @@ precisão milimétrica e estética superior.</p>
 
         <div class="location__map">
           <a href="https://www.google.com/maps/search/?api=1&query=Rua+Maria+Curupaiti,+441,+Vila+Ester,+São+Paulo,+SP,+02452-001" target="_blank" rel="noopener noreferrer">
-            <img src="src/assets/images/location__map-image.avif" alt="Mapa com a localização da clínica OralVita" />
+            <img loading="lazy" src="src/assets/images/location__map-image.avif" alt="Mapa com a localização da clínica OralVita" />
           </a>
         </div>
         </div>
@@ -389,7 +390,7 @@ precisão milimétrica e estética superior.</p>
         <div class="footer__brand">
           <p class="footer__logo">OralVita</p>
           <p class="footer__tagline">
-            © 2024 OralVita. Todos os direitos reservados.
+            © 2026 OralVita. Todos os direitos reservados.
           </p>
         </div>
 
@@ -405,8 +406,43 @@ precisão milimétrica e estética superior.</p>
     </footer>
 
 
-    <script>
-      lucide.createIcons();
+    <script type="module">
+      import { 
+        createIcons,
+        
+        /* Header */
+        Menu, 
+        X, 
+        MessageSquareText,
+
+        /* Services */
+        Sparkles,
+        AlignHorizontalSpaceAround,
+        Spotlight,
+        Brush,
+        Disc2,
+        Sun,
+        ShieldPlus,
+        Wallet,
+        SmilePlus,
+        BriefcaseMedical,
+        Wrench,
+
+        /* Location */
+        MapPin, 
+        Clock
+
+      } from 'https://esm.sh/lucide@latest';
+
+      createIcons({ 
+        icons: { 
+          Menu, X, MessageSquareText,
+          Sparkles, AlignHorizontalSpaceAround, Spotlight,
+          Brush, Disc2, Sun, ShieldPlus, Wallet,
+          SmilePlus, BriefcaseMedical, Wrench,
+          MapPin, Clock
+        } 
+      });
     </script>
   </body>
 </html>
